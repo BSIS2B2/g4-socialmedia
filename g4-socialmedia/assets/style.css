@@ -1,0 +1,189 @@
+/* ===============================
+   GLOBAL BACKGROUND
+   =============================== */
+
+[data-testid="stAppViewContainer"] {
+    background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGJpemdpeHdqejh6Y2xjbHRvaWZ3Mzc3dXViMjd1eTNldmM4bHBtYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ===============================
+   TRANSPARENT BLOCKS
+   =============================== */
+
+[data-testid="stVerticalBlock"] > div {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* ===============================
+   TEXT VISIBILITY
+   =============================== */
+
+.stMarkdown, p, h1, h2, h3, h4, span, label {
+    color: white !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,1);
+}
+
+/* ===============================
+   HEADER / NAV BAR
+   =============================== */
+
+[data-testid="stHeader"] {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(6px);
+}
+
+header {
+    visibility: visible !important;
+}
+
+/* ===============================
+   REMOVE STREAMLIT DEFAULT MENU
+   =============================== */
+
+[data-testid="stSidebarNav"] {
+    display: none !important;
+}
+
+/* ===============================
+   SIDEBAR MENU ALIGNMENT
+   =============================== */
+
+[data-testid="stSidebar"] > div:first-child {
+    padding-top: 10px;
+}
+
+[data-testid="stSidebar"]
+.stRadio div[role="radiogroup"] {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+}
+
+/* Hide radio circles */
+[data-testid="stSidebar"]
+.stRadio div[role="radiogroup"]
+[data-testid="stWidgetSelectionStateMarker"] {
+    display: none;
+}
+
+/* Sidebar buttons */
+[data-testid="stSidebar"]
+.stRadio div[role="radiogroup"] label {
+    width: 100%;
+    box-sizing: border-box;
+
+    background: transparent;
+    border: 1px solid white;
+
+    padding: 14px 10px !important;
+    margin: 0 !important;
+
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    transition: all 0.25s ease;
+}
+
+/* Text inside buttons */
+[data-testid="stSidebar"]
+.stRadio div[role="radiogroup"] label div p {
+    margin: 0;
+    padding: 0;
+    color: white !important;
+    font-weight: 500;
+}
+
+/* Hover */
+[data-testid="stSidebar"]
+.stRadio div[role="radiogroup"] label:hover {
+    background-color: rgb(33, 183, 248);
+}
+
+/* Active */
+[data-testid="stSidebar"]
+.stRadio div[role="radiogroup"] label[aria-checked="true"] {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Sidebar title */
+[data-testid="stSidebar"] h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white !important;
+}
+
+/* ===============================
+   MAIN CONTENT
+   =============================== */
+
+.main-content {
+    padding: 30px;
+}
+
+/* ===============================
+   DIVIDER
+   =============================== */
+
+hr {
+    border-color: rgba(255,255,255,0.4);
+}
+
+/* ===============================
+   MUTUAL FRIENDS PAGE STYLING
+   =============================== */
+
+/* Title style for Mutual Friends */
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffd700;  /* gold */
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+/* Success message (mutual friends list) */
+.stSuccess {
+    background-color: rgba(0, 128, 0, 0.1) !important;
+    border-left: 6px solid #28a745 !important;
+    padding: 10px 20px !important;
+    font-size: 1.2rem !important;
+}
+
+/* Info message style (no mutual friends) */
+.stInfo {
+    background-color: rgba(0, 123, 255, 0.1) !important;
+    border-left: 6px solid #007bff !important;
+    padding: 10px 20px !important;
+    font-size: 1.2rem !important;
+}
+
+/* Warning message style */
+.stWarning {
+    background-color: rgba(255, 193, 7, 0.1) !important;
+    border-left: 6px solid #ffc107 !important;
+    padding: 10px 20px !important;
+    font-size: 1.2rem !important;
+}
+
+/* Bullet list style for mutual friends */
+ul.mutual-friends-list {
+    font-size: 1.2rem;
+    color: white;
+    list-style-type: disc;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
